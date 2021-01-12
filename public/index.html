@@ -9,7 +9,13 @@
   <script src="./js/bundle.js"></script>
 </head>
 <body>
+    <h1>Currency exchange calculator</h1>
   <div id="app">
+    <label for="currency_select">Select currency:</label>
+    <select id="currency_select" v-model="selectedCurrency">
+        <option disabled_value="">Select currency</option>
+        <option v-for="(currency, index) in currencies" :value="currency">{{ Object.keys(index) }}</option>
+    </select>
 
 </div>
 
